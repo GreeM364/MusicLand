@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MusicLand.WEB.Models.VM.SongViewModel>
+
+<br />
+<div class="container p-4 border">
+	<div class="row pb-2">
+		<div class="col">
+			<h1 class="text-primary">Song List</h1>
+		</div>
+		<div class="col text-end pt-1">
+			<a asp-controller="Song" asp-action="CreateSong" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"></i> Add New Song</a>
+		</div>
+	</div>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th width="20%">
+					Title
+				</th>
+				<th width="10%">
+					Duration
+				</th>
+				<th width="20%">
+					Genre
+				</th>
+				<th width="20%">
+					Artist
+				</th>
+				<th width="10%">
+					Rating
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>@item.Title</td>
+					<td>@item.Duration</td>
+					<td>@item.Genre</td>
+					<td>@item.Artist</td>
+					<td>@Math.Round(item.Rating, 2)</td>
+					<td>
+						<a asp-controller="Rating" asp-action="CreateRating" asp-route-songId="@item.SongID" class="btn btn-primary"><i class="bi bi-bar-chart-fill"></i></a>
+						<a asp-controller="Song" asp-action="UpdateSong" asp-route-songId="@item.SongID" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+						<a asp-controller="Song" asp-action="DeleteSong" asp-route-songId="@item.SongID" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+</div>

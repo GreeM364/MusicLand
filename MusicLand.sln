@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicLand.API", "MusicLand\MusicLand.API.csproj", "{8888ABE7-8B42-4EE8-956D-AF76559BCF1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicLand.DAL", "MusicLand.DAL\MusicLand.DAL.csproj", "{D22ACC27-F0CB-4378-97FC-329C3F20392F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicLand.WEB", "MusicLand.WEB\MusicLand.WEB.csproj", "{E389C35E-AAE1-45D8-A728-ED0416E97E0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8888ABE7-8B42-4EE8-956D-AF76559BCF1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8888ABE7-8B42-4EE8-956D-AF76559BCF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8888ABE7-8B42-4EE8-956D-AF76559BCF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8888ABE7-8B42-4EE8-956D-AF76559BCF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22ACC27-F0CB-4378-97FC-329C3F20392F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22ACC27-F0CB-4378-97FC-329C3F20392F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22ACC27-F0CB-4378-97FC-329C3F20392F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22ACC27-F0CB-4378-97FC-329C3F20392F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E389C35E-AAE1-45D8-A728-ED0416E97E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E389C35E-AAE1-45D8-A728-ED0416E97E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E389C35E-AAE1-45D8-A728-ED0416E97E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E389C35E-AAE1-45D8-A728-ED0416E97E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE00BAAC-0B0F-4CDA-80CD-5576F6055F67}
+	EndGlobalSection
+EndGlobal

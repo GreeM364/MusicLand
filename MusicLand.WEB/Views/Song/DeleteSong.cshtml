@@ -1,0 +1,53 @@
+﻿@model MusicLand.WEB.Models.VM.SongDeleteViewModel
+
+<form asp-action="DeleteSong">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Delete Song</h1>
+        <hr />
+        <input hidden asp-for="Song.SongID" />
+        <div class="row">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="col-2">
+                <label asp-for="Song.Title" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Song.Title" disabled class="form-control" />
+            </div>
+            <div class="col-2">
+                <label asp-for="Song.Duration" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Song.Duration" disabled class="form-control" />
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;">Genre</label>
+            </div>
+            <div class="col-10 pb-3">
+                <select asp-for="Song.GenreID" disabled class="form-select" asp-items="@Model.GenreList">
+                    <option disabled selected>--Select Genre--</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;">Artist</label>
+            </div>
+            <div class="col-10 pb-3">
+                <select asp-for="Song.ArtistID" disabled class="form-select" asp-items="@Model.ArtistList">
+                    <option disabled selected>--Select Artist--</option>
+                </select>
+            </div>
+            <div class="col-5 offset-2">
+                <a asp-controller="Song" asp-action="IndexSong" class="btn-primary btn form-control ">Back to List</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Delete" class="btn btn-danger form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,112 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<MusicLand.WEB.Models.VM.SongViewModel>
+
+<br />
+<div class="container p-4 border">
+	<div class="row pb-2">
+		<div class="col">
+			<h1 class="text-primary">Welcome to MusicLand</h1>
+			<p class="lead">MusicLand is a music streaming platform that offers access to millions of songs from around the world. Discover new music, create playlists, and enjoy your favorite artists all in one place.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 mb-4">
+			<div class="card">
+				<img src="~/2.jpg" class="card-img-top img-fluid" alt="MusicLand Image">
+				<div class="card-body">
+					<h2 class="card-title">Popular Artists</h2>
+					<p class="card-text">Check out some of the most popular artists on MusicLand:</p>
+					<ul class="list-group">
+						<li class="list-group-item">Ed Sheeran</li>
+						<li class="list-group-item">Taylor Swift</li>
+						<li class="list-group-item">Beyoncé</li>
+						<li class="list-group-item">Drake</li>
+						<li class="list-group-item">Adele</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 mb-4">
+			<div class="card">
+                <img width="450px" height="200px" src="~/3.jpg" class="card-img-top img-fluid" alt="MusicLand Image">
+				<div class="card-body">
+					<h2 class="card-title">Featured Musics</h2>
+                    <p class="card-text">Check out some of our featured musics:</p>
+					<div class="row">
+						<div class="col-md-6">
+                            <img width="300px" height="300px" src="~/4.jpg" class="img-fluid" alt="Playlist Image">
+							<p>Chill Vibes</p>
+						</div>
+						<div class="col-md-6">
+                            <img width="300px" height="300px" src="~/5.jpg" class="img-fluid" alt="Playlist Image">
+							<p>Workout Tunes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="container p-4 border">
+        <div class="row pb-2">
+            <div class="col">
+                <p class="lead">Check out some of the latest songs added to MusicLand:</p>
+                <h1 class="text-primary">Song List</h1>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th width="20%"></th>
+                    <th width="20%">
+                        Title
+                    </th>
+                    <th width="10%">
+                        Duration
+                    </th>
+                    <th width="20%">
+                        Genre
+                    </th>
+                    <th width="20%">
+                        Artist
+                    </th>
+                    <th width="10%">
+                        Rating
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><img height="50px" src="~/photo_2023-05-09_18-44-05.jpg"></td>
+                        <td>@item.Title</td>
+                        <td>@item.Duration</td>
+                        <td>@item.Genre</td>
+                        <td>@item.Artist</td>
+                        <td>@Math.Round(item.Rating, 2)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="row pt-4">
+            <div class="col-md-8">
+                <h2>About MusicLand</h2>
+                <p>MusicLand is a free music streaming service that lets you listen to your favorite songs and discover new music. With MusicLand, you can create custom playlists, share music with your friends, and explore new genres and artists.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Connect with us</h2>
+                <ul>
+                    <li><a href="#"><i class="bi bi-facebook fa-lg"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter fa-lg"></i> </a></li>
+                    <li><a href="#"><i class="bi bi-instagram fa-lg"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
